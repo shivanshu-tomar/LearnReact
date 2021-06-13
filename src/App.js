@@ -1,11 +1,7 @@
 import "./App.css";
-import LoginContainer from "./container/loginContainer";
+import Routes from "./Routers/Routes";
 function App() {
-  return (
-    <div className="container-div">
-      <LoginContainer />
-    </div>
-  );
+  return <Routes />;
 }
 
 export default App;

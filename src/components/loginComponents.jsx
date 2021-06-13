@@ -7,6 +7,8 @@ function loginComponents({
   emailChangeHandler,
   passwordChangeHandler,
   onClickHandler,
+  emailError,
+  passError,
 }) {
   return (
     <Card style={{ width: "18rem" }}>
@@ -19,6 +21,7 @@ function loginComponents({
               type="email"
               placeholder="Enter email"
             />
+            {emailError !== "" && <span>{emailError}</span>}
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -28,6 +31,7 @@ function loginComponents({
               type="password"
               placeholder="Password"
             />
+            {passError !== "" && <span>{passError}</span>}
           </Form.Group>
 
           <Button onClick={onClickHandler} variant="primary" type="submit">
